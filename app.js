@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const messageRoutes = require("./routes/messageRoutes");
 
-const port = 6005;
+const port = process.env.PORT || 6005;
 
 const setUpExpress = () => {
     app.use(express.json({ limit: '50mb' }));
