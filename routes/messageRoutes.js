@@ -41,7 +41,9 @@ router.post("/add-message", async (req, res, next) => {
 router.post("/delete-message/:id", async (req, res, next) => {
     try {
         await messageController.deleteMessage(req.params.id);
-        res.status(200);
+        res.status(200)
+        res.send(`Message deleted.`)
+
     } catch (error) {
 
     }
