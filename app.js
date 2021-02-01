@@ -6,7 +6,7 @@ const messageRoutes = require("./routes/messageRoutes");
 const emailRoutes = require('./routes/emailRoutes');
 
 
-const port = 6005;
+const port = process.env.PORT || 6005;
 
 const setUpExpress = () => {
     app.use(express.json({ limit: '50mb' }));
